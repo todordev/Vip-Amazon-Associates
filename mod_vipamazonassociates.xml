@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+    <name>Vip Amazon Associates</name>
+	<author>Todor Iliev</author>
+	<creationDate>April, 2010</creationDate>
+	<copyright>Copyright (C) 2010 Todor Iliev ( ITPrism.com )</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html</license>
+	<authorEmail>todor@itprism.com</authorEmail>
+	<authorUrl>http://itprism.com</authorUrl>
+	<version>1.5</version>
+	<description><![CDATA[
+	<p><a href="http://itprism.com/free-joomla-extensions/ecommerce-gamification/amazon-associate-affiliate">Vip Amazon Associates</a> is a simple solution that implements Amazon Associates Widget as Joomla! module.</p>
+	<p>Invest in the extension and help for its improvement. You can <a href="http://itprism.com/sponsorship" title="Sponsoring" target="_blank">sponsor the extension via SMS or PayPal</a>.</p>
+    <p><a href="http://itprism.com/" target="_blank">Subscribe for the newsletter</a> to receive information about updates and new ITPrism extensions.</p>
+	<p>Please, vote for the module on <a href="http://extensions.joomla.org/extensions/ads-a-affiliates/amazon/8450" target="_blank">Joomla! Extensions Directory</a>.</p>
+	]]></description>
+	<languages>
+        <language tag="en-GB">en-GB.mod_vipamazonassociates.ini</language>
+    </languages>
+	<files>
+		<filename module="mod_vipamazonassociates">mod_vipamazonassociates.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="amazon_tracking_id" type="text"  default="" label="MOD_VIPAMAZONASSOCIATES_AMAZON_ID" description="MOD_VIPAMAZONASSOCIATES_AMAZON_ID_DESC" />
+				<field name="amazon_domain" type="list" default="us" label="MOD_VIPAMAZONASSOCIATES_DOMAIN" description="MOD_VIPAMAZONASSOCIATES_DOMAIN_DESC">
+					<option value="us">Amazon.com ( United State )</option>
+					<option value="uk">Amazon.co.uk ( United Kingdom )</option>
+					<option value="de">Amazon.de ( Germany )</option>
+					<option value="fr">Amazon.fr ( France )</option>
+					<option value="jp">Amazon.co.jp ( Japan )</option>
+					<option value="ca">Amazon.ca ( Canada )</option>
+					<option value="it">Amazon.it ( Italy )</option>
+				</field>
+				<field name="amazon_size" type="list" default="14" label="MOD_VIPAMAZONASSOCIATES_SIZE" description="MOD_VIPAMAZONASSOCIATES_SIZE_DESC">
+					<option value="20">120 x 90 ( only Amazon.it )</option>
+					<option value="6">120 x 150</option>
+					<option value="8">120 x 240</option>
+					<option value="9">180 x 150</option>
+					<option value="10">120 x 450</option>
+					<option value="11">120 x 600</option>
+					<option value="11">234 x 60</option>
+					<option value="42">300 x 250 ( only Amazon.it )</option>
+					<option value="13">468 x 60</option>
+					<option value="14">160 x 600</option>
+					<option value="15">468 x 240</option>
+					<option value="16">468 x 336</option>
+					<option value="48">728 x 90</option>
+				</field>
+				<field name="amazon_behavior" type="list" default="_top" label="MOD_VIPAMAZONASSOCIATES_TARGETLINK" description="MOD_VIPAMAZONASSOCIATES_TARGETLINK_DESC">
+				   <option value="_top">MOD_VIPAMAZONASSOCIATES_OPEN_SAME</option>
+				   <option value="_blank">MOD_VIPAMAZONASSOCIATES_OPEN_NEW</option>
+				</field>
+				
+				<field name="amazon_price_options" type="list" default="" label="MOD_VIPAMAZONASSOCIATES_PRICE_OPTIONS" description="MOD_VIPAMAZONASSOCIATES_PRICE_OPTIONS_DESC">
+				   <option value="">MOD_VIPAMAZONASSOCIATES_DISPLAY_ALL</option>
+				   <option value="nou">MOD_VIPAMAZONASSOCIATES_DISPLAY_NEW</option>
+				   <option value="npa">MOD_VIPAMAZONASSOCIATES_DONT_DISPLAY</option>
+				</field>        
+				
+				<field name="amazon_category" type="list" default="books" label="MOD_VIPAMAZONASSOCIATES_CATEGORY" description="MOD_VIPAMAZONASSOCIATES_CATEGORY_DESC">
+				   <option value="apparel">Apparel</option>
+				   <option value="automotive">Automotive</option>
+				   <option value="baby">Baby</option>
+				   <option value="beauty">Beauty</option>
+				   <option value="books">Books</option>
+				   <option value="photo">Camera and Photo</option>
+				   <option value="wireless-phones">Cell Phones and Service</option>
+				   <option value="classical">Classical Music</option>
+				   <option value="pc-hardware">Computers</option>
+				   <option value="dvd">DVD</option>
+				   <option value="electronics">Electronics</option>
+				   <option value="gourmet">Gourmet Food</option>
+				   <option value="grocery">grocery</option>
+				   <option value="garden">Home and Garden</option>
+				   <option value="hpc">Health and Personal Care</option>
+				   <option value="industrial">Industrial and Scientific</option>
+				   <option value="jewelry">Jewelry</option>
+				   <option value="kindle">Kindle Store</option>
+				   <option value="kitchen">Kitchen and Housewares</option>
+				   <option value="magazines">Magazine Subscriptions</option>
+				   <option value="universal">Miscellaneous</option>
+				   <option value="digital-music">MP3 Downloads</option>
+				   <option value="music">Music</option>
+				   <option value="mi">Musical Instruments</option>
+				   <option value="office-products">Office Products</option>
+				   <option value="shoes">Shoes</option>
+				   <option value="software">Software</option>
+				   <option value="sporting">Sports and Outdoors</option>
+				   <option value="tools">Tools and Hardware</option>
+				   <option value="toys">Toys and Games</option>
+				   <option value="vhs">VHS</option>
+				   <option value="amazontv">Video On Demand Videos</option>
+				   <option value="videogames">Video Games</option>
+				   <option value="watches">Watches</option>
+				   <option value="wireless-accessories">Wireless Accessories</option>
+				</field>
+				<field name="amazon_filter" type="list" default="0" label="MOD_VIPAMAZONASSOCIATES_FILTER" description="MOD_VIPAMAZONASSOCIATES_FILTER_DESC">
+				   <option value="0">Custom keywords</option>
+				   <option value="1">Meta keywords</option>
+				   <option value="2">Page title</option>
+				</field>
+				<field name="amazon_keywords" type="text" size="80" default="" label="MOD_VIPAMAZONASSOCIATES_KEYWORDS" description="MOD_VIPAMAZONASSOCIATES_KEYWORDS_DESC" />
+				<field name="amazon_bg_colour" type="text" size="6" default="FFFFFF" label="MOD_VIPAMAZONASSOCIATES_BG_COLOR" description="MOD_VIPAMAZONASSOCIATES_BG_COLOR_DESC" />
+				<field name="amazon_text_colour" type="text" size="6" default="000000" label="MOD_VIPAMAZONASSOCIATES_TEXT_COLOR" description="MOD_VIPAMAZONASSOCIATES_TEXT_COLOR_DESC" />
+				<field name="amazon_link_colour" type="text" size="6" default="3366FF" label="MOD_VIPAMAZONASSOCIATES_LINK_COLOR" description="MOD_VIPAMAZONASSOCIATES_LINK_COLOR_DESC" />
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field
+                    name="moduleclass_sfx"
+                    type="text"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+                <field
+                    name="cache"
+                    type="list"
+                    default="1"
+                    label="COM_MODULES_FIELD_CACHING_LABEL"
+                    description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option
+                        value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option
+                        value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+                <field
+                    name="cache_time"
+                    type="text"
+                    default="900"
+                    label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                    description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+                <field
+                    name="cachemode"
+                    type="hidden"
+                    default="static">
+                    <option
+                        value="static"></option>
+                </field>
+
+				<field name="blocked_ips" type="textarea" default="" label="MOD_VIPAMAZONASSOCIATES_BLOCKED_IPS" description="MOD_VIPAMAZONASSOCIATES_BLOCKED_IPS_DESC" cols="50" rows="8" />
+				<field name="alt_message" type="textarea" default="" label="MOD_VIPAMAZONASSOCIATES_BLOCKED_IPS_MSG" description="MOD_VIPAMAZONASSOCIATES_BLOCKED_IPS_MSG_DESC" cols="50" rows="8" />
+				
+			</fieldset>
+		</fields>
+    </config>
+</extension>
