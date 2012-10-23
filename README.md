@@ -10,10 +10,10 @@ Changelog
 
 v1.6
 -----------
+* Added new categories
 * Added align option - left, right, center
 * Added new options - display banner, banner code (used in Amazon.it)
-* Added a field for custom code
-* Added Spain
+* Added a textarea for custom code
 * Banners size updated
 * Improved
 

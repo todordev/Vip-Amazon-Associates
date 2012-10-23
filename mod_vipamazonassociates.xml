@@ -79,46 +79,53 @@
 				</field>        
 				
 				<field name="amazon_category" type="list" default="books" label="MOD_VIPAMAZONASSOCIATES_CATEGORY" description="MOD_VIPAMAZONASSOCIATES_CATEGORY_DESC">
-				   <option value="apparel">Apparel</option>
-				   <option value="automotive">Automotive</option>
-				   <option value="baby">Baby</option>
-				   <option value="beauty">Beauty</option>
-				   <option value="books">Books</option>
-				   <option value="photo">Camera and Photo</option>
-				   <option value="wireless-phones">Cell Phones and Service</option>
-				   <option value="classical">Classical Music</option>
-				   <option value="pc-hardware">Computers</option>
-				   <option value="dvd">DVD</option>
-				   <option value="electronics">Electronics</option>
-				   <option value="gourmet">Gourmet Food</option>
-				   <option value="grocery">grocery</option>
-				   <option value="garden">Home and Garden</option>
-				   <option value="hpc">Health and Personal Care</option>
-				   <option value="industrial">Industrial and Scientific</option>
-				   <option value="jewelry">Jewelry</option>
-				   <option value="kindle">Kindle Store</option>
-				   <option value="kitchen">Kitchen and Housewares</option>
-				   <option value="magazines">Magazine Subscriptions</option>
-				   <option value="universal">Miscellaneous</option>
-				   <option value="digital-music">MP3 Downloads</option>
-				   <option value="music">Music</option>
-				   <option value="mi">Musical Instruments</option>
-				   <option value="office-products">Office Products</option>
-				   <option value="shoes">Shoes</option>
-				   <option value="software">Software</option>
-				   <option value="sporting">Sports and Outdoors</option>
-				   <option value="tools">Tools and Hardware</option>
-				   <option value="toys">Toys and Games</option>
-				   <option value="vhs">VHS</option>
-				   <option value="amazontv">Video On Demand Videos</option>
-				   <option value="videogames">Video Games</option>
-				   <option value="watches">Watches</option>
-				   <option value="wireless-accessories">Wireless Accessories</option>
+				   <option value="amazontv">MOD_VIPAMAZONASSOCIATES_AMAZON_INSTANT_VIDEO</option>
+				   <option value="apparel">MOD_VIPAMAZONASSOCIATES_APPAREL</option>
+				   <option value="appliances">MOD_VIPAMAZONASSOCIATES_APPLIANCES</option>
+				   <option value="arts-crafts">MOD_VIPAMAZONASSOCIATES_ARTS</option>
+				   <option value="automotive">MOD_VIPAMAZONASSOCIATES_AUTOMOTIVE</option>
+				   <option value="baby">MOD_VIPAMAZONASSOCIATES_BABY</option>
+				   <option value="beauty">MOD_VIPAMAZONASSOCIATES_BEAUTY</option>
+				   <option value="books">MOD_VIPAMAZONASSOCIATES_BOOKS</option>
+				   <option value="photo">MOD_VIPAMAZONASSOCIATES_CAMERA_PHOTO</option>
+				   <option value="wireless-phones">MOD_VIPAMAZONASSOCIATES_CELL_PHONES</option>
+				   <option value="classical">MOD_VIPAMAZONASSOCIATES_CLASSICAL_MUSIC</option>
+				   <option value="pc-hardware">MOD_VIPAMAZONASSOCIATES_COMPUTERS</option>
+				   <option value="dvd">MOD_VIPAMAZONASSOCIATES_DVD</option>
+				   <option value="electronics">MOD_VIPAMAZONASSOCIATES_ELECTRONICS</option>
+				   <option value="entertainment-collectibles">MOD_VIPAMAZONASSOCIATES_ENTERTAINMENT_COLLECTIBLES</option>
+				   <option value="gamedownloads">MOD_VIPAMAZONASSOCIATES_GAME_DOWNLOADS</option>
+				   <option value="gift-cards">MOD_VIPAMAZONASSOCIATES_GIFT_CARDS</option>
+				   <option value="grocery">MOD_VIPAMAZONASSOCIATES_GROCERY</option>
+				   <option value="garden">MOD_VIPAMAZONASSOCIATES_HOME_GARDEN</option>
+				   <option value="hpc">MOD_VIPAMAZONASSOCIATES_HEALTH</option>
+				   <option value="industrial">MOD_VIPAMAZONASSOCIATES_INDUSTRIAL_SCIENTIFIC</option>
+				   <option value="jewelry">MOD_VIPAMAZONASSOCIATES_JEWELRY</option>
+				   <option value="kindle">MOD_VIPAMAZONASSOCIATES_KINDLE_STORE</option>
+				   <option value="kitchen">MOD_VIPAMAZONASSOCIATES_KITCHEN_HOUSEWARES</option>
+				   <option value="magazines">MOD_VIPAMAZONASSOCIATES_MAGAZINE_SUBSCRIPTIONS</option>
+				   <option value="universal">MOD_VIPAMAZONASSOCIATES_MISCELLANEOUS</option>
+				   <option value="digital-music">MOD_VIPAMAZONASSOCIATES_MP3_DOWNLOADS</option>
+				   <option value="music">MOD_VIPAMAZONASSOCIATES_MUSIC</option>
+				   <option value="mi">MOD_VIPAMAZONASSOCIATES_MUSICAL_INSTRUMENTS</option>
+				   <option value="office-products">MOD_VIPAMAZONASSOCIATES_OFFICE_PRODUCTS</option>
+				   <option value="pet-supplies">MOD_VIPAMAZONASSOCIATES_PET_SUPPLIES</option>
+				   <option value="lawn-garden">MOD_VIPAMAZONASSOCIATES_PATIO</option>
+				   <option value="shoes">MOD_VIPAMAZONASSOCIATES_SHOES</option>
+				   <option value="software">MOD_VIPAMAZONASSOCIATES_SOFTWARE</option>
+				   <option value="sports-collectibles">MOD_VIPAMAZONASSOCIATES_SPORTS_COLLECTIBLES</option>
+				   <option value="sporting">MOD_VIPAMAZONASSOCIATES_SPORTS_OUTDOORS</option>
+				   <option value="tools">MOD_VIPAMAZONASSOCIATES_TOOLS_HARDWARE</option>
+				   <option value="toys">MOD_VIPAMAZONASSOCIATES_TOYS_GAMES</option>
+				   <option value="vhs">MOD_VIPAMAZONASSOCIATES_VHS</option>
+				   <option value="videogames">MOD_VIPAMAZONASSOCIATES_VIDEO_GAMES</option>
+				   <option value="watches">MOD_VIPAMAZONASSOCIATES_WATCHES</option>
+				   <option value="wireless-accessories">MOD_VIPAMAZONASSOCIATES_WIRELESS_ACCESSORIES</option>
 				</field>
 				<field name="amazon_filter" type="list" default="0" label="MOD_VIPAMAZONASSOCIATES_FILTER" description="MOD_VIPAMAZONASSOCIATES_FILTER_DESC">
-				   <option value="0">Custom keywords</option>
-				   <option value="1">Meta keywords</option>
-				   <option value="2">Page title</option>
+				   <option value="0">MOD_VIPAMAZONASSOCIATES_CUSTOM_KEYWORDS</option>
+				   <option value="1">MOD_VIPAMAZONASSOCIATES_META_KEYWORDS</option>
+				   <option value="2">MOD_VIPAMAZONASSOCIATES_PAGE_TITLE</option>
 				</field>
 				<field name="amazon_keywords" type="text" size="80" default="" label="MOD_VIPAMAZONASSOCIATES_KEYWORDS" description="MOD_VIPAMAZONASSOCIATES_KEYWORDS_DESC" />
 				<field name="amazon_bg_colour" type="text" size="6" default="FFFFFF" label="MOD_VIPAMAZONASSOCIATES_BG_COLOR" description="MOD_VIPAMAZONASSOCIATES_BG_COLOR_DESC" />
