@@ -35,13 +35,13 @@
                 </field>
 				<field name="amazon_tracking_id" type="text"  default="" label="MOD_VIPAMAZONASSOCIATES_AMAZON_ID" description="MOD_VIPAMAZONASSOCIATES_AMAZON_ID_DESC" />
 				<field name="amazon_domain" type="list" default="us" label="MOD_VIPAMAZONASSOCIATES_DOMAIN" description="MOD_VIPAMAZONASSOCIATES_DOMAIN_DESC">
-					<option value="us">Amazon.com ( United State )</option>
-					<option value="uk">Amazon.co.uk ( United Kingdom )</option>
-					<option value="de">Amazon.de ( Germany )</option>
-					<option value="fr">Amazon.fr ( France )</option>
-					<option value="jp">Amazon.co.jp ( Japan )</option>
-					<option value="ca">Amazon.ca ( Canada )</option>
-					<option value="it">Amazon.it ( Italy )</option>
+					<option value="us">MOD_VIPAMAZONASSOCIATES_DOMAIN_COM</option>
+					<option value="uk">MOD_VIPAMAZONASSOCIATES_DOMAIN_CO_UK</option>
+					<option value="de">MOD_VIPAMAZONASSOCIATES_DOMAIN_DE</option>
+					<option value="fr">MOD_VIPAMAZONASSOCIATES_DOMAIN_FR</option>
+					<option value="jp">MOD_VIPAMAZONASSOCIATES_DOMAIN_JP</option>
+					<option value="ca">MOD_VIPAMAZONASSOCIATES_DOMAIN_CA</option>
+					<option value="it">MOD_VIPAMAZONASSOCIATES_DOMAIN_IT</option>
 				</field>
 				<field name="amazon_size" type="list" default="14" label="MOD_VIPAMAZONASSOCIATES_SIZE" description="MOD_VIPAMAZONASSOCIATES_SIZE_DESC">
 					<option value="6">120 x 150</option>
