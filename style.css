@@ -1,0 +1,12 @@
+.itp_va_center{
+	margin: 0 auto !important;
+	text-align: center !important;
+}
+
+.itp_va_left{
+	text-align:left !important;
+}
+
+.itp_va_right{
+	text-align:right !important;
+}

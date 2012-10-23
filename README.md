@@ -1,12 +1,22 @@
-Vip-Amazon-Associates
+Vip Amazon Associates for Joomla!
 =====================
-( Version 1.5 )
+( Version 1.6 )
 --------------------------
 
 Vip Amazon Associates is a Joomla! module that add Amazon Affiliate widget on your website.
 
 Changelog
 -----------
+
+v1.6
+-----------
+* Added align option - left, right, center
+* Added new options - display banner, banner code (used in Amazon.it)
+* Added a field for custom code
+* Added Spain
+* Banners size updated
+* Improved
+
 
 v1.5
 -----------

@@ -1,29 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <extension type="module" version="2.5" client="site" method="upgrade">
-    <name>Vip Amazon Associates</name>
+    <name>MOD_VIPAMAZONASSOCIATES</name>
 	<author>Todor Iliev</author>
-	<creationDate>April, 2010</creationDate>
 	<copyright>Copyright (C) 2010 Todor Iliev ( ITPrism.com )</copyright>
 	<license>http://www.gnu.org/copyleft/gpl.html</license>
 	<authorEmail>todor@itprism.com</authorEmail>
 	<authorUrl>http://itprism.com</authorUrl>
-	<version>1.5</version>
-	<description><![CDATA[
-	<p><a href="http://itprism.com/free-joomla-extensions/ecommerce-gamification/amazon-associate-affiliate">Vip Amazon Associates</a> is a simple solution that implements Amazon Associates Widget as Joomla! module.</p>
-	<p>Invest in the extension and help for its improvement. You can <a href="http://itprism.com/sponsorship" title="Sponsoring" target="_blank">sponsor the extension via SMS or PayPal</a>.</p>
-    <p><a href="http://itprism.com/" target="_blank">Subscribe for the newsletter</a> to receive information about updates and new ITPrism extensions.</p>
-	<p>Please, vote for the module on <a href="http://extensions.joomla.org/extensions/ads-a-affiliates/amazon/8450" target="_blank">Joomla! Extensions Directory</a>.</p>
-	]]></description>
-	<languages>
-        <language tag="en-GB">en-GB.mod_vipamazonassociates.ini</language>
-    </languages>
+	<version>1.6</version>
+	<creationDate>23 October, 2012</creationDate>
+	<description>MOD_VIPAMAZONASSOCIATES_DESC</description>
+	
+	<languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.mod_vipamazonassociates.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_vipamazonassociates.sys.ini</language>
+    </languages> 
+    
+    <help url="MOD_VIPAMAZONASSOCIATES_HELP_URL"/>
+    
 	<files>
 		<filename module="mod_vipamazonassociates">mod_vipamazonassociates.php</filename>
 		<filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>style.css</filename>
+        <filename>README.md</filename>
+        <folder>tmpl</folder>
 	</files>
+	
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
+			    <field name="display_banner" type="radio" default="1" label="MOD_VIPAMAZONASSOCIATES_DISPLAY_BANNER" description="MOD_VIPAMAZONASSOCIATES_DISPLAY_BANNER_DESC" >
+                   <option value="0">JNO</option>
+                   <option value="1">JYES</option>
+                </field>
 				<field name="amazon_tracking_id" type="text"  default="" label="MOD_VIPAMAZONASSOCIATES_AMAZON_ID" description="MOD_VIPAMAZONASSOCIATES_AMAZON_ID_DESC" />
 				<field name="amazon_domain" type="list" default="us" label="MOD_VIPAMAZONASSOCIATES_DOMAIN" description="MOD_VIPAMAZONASSOCIATES_DOMAIN_DESC">
 					<option value="us">Amazon.com ( United State )</option>
@@ -35,19 +44,28 @@
 					<option value="it">Amazon.it ( Italy )</option>
 				</field>
 				<field name="amazon_size" type="list" default="14" label="MOD_VIPAMAZONASSOCIATES_SIZE" description="MOD_VIPAMAZONASSOCIATES_SIZE_DESC">
-					<option value="20">120 x 90 ( only Amazon.it )</option>
 					<option value="6">120 x 150</option>
 					<option value="8">120 x 240</option>
 					<option value="9">180 x 150</option>
 					<option value="10">120 x 450</option>
 					<option value="11">120 x 600</option>
-					<option value="11">234 x 60</option>
-					<option value="42">300 x 250 ( only Amazon.it )</option>
+					<option value="12">300 x 250</option>
 					<option value="13">468 x 60</option>
 					<option value="14">160 x 600</option>
 					<option value="15">468 x 240</option>
 					<option value="16">468 x 336</option>
-					<option value="48">728 x 90</option>
+                    
+                    <option value="31">120 x 212 ( Only for co.uk, de )</option>
+                    <option value="32">180 x 450 ( Only for de )</option>
+                    <option value="33">150 x 170 ( Only for co.uk, de )</option>
+                    <option value="36">600 x 520 ( Only for co.uk, de  )</option>
+                    <option value="37">120 x 170 ( Only for de )</option>
+
+                    <option value="20">120 x 90 ( only Amazon.it )</option>
+                    <option value="42">234 x 60 ( only Amazon.it )</option>                    
+                    <option value="48">728 x 90</option>
+					<option value="286">200 x 200 ( Only for co.uk, de )</option>
+					
 				</field>
 				<field name="amazon_behavior" type="list" default="_top" label="MOD_VIPAMAZONASSOCIATES_TARGETLINK" description="MOD_VIPAMAZONASSOCIATES_TARGETLINK_DESC">
 				   <option value="_top">MOD_VIPAMAZONASSOCIATES_OPEN_SAME</option>
@@ -106,8 +124,17 @@
 				<field name="amazon_bg_colour" type="text" size="6" default="FFFFFF" label="MOD_VIPAMAZONASSOCIATES_BG_COLOR" description="MOD_VIPAMAZONASSOCIATES_BG_COLOR_DESC" />
 				<field name="amazon_text_colour" type="text" size="6" default="000000" label="MOD_VIPAMAZONASSOCIATES_TEXT_COLOR" description="MOD_VIPAMAZONASSOCIATES_TEXT_COLOR_DESC" />
 				<field name="amazon_link_colour" type="text" size="6" default="3366FF" label="MOD_VIPAMAZONASSOCIATES_LINK_COLOR" description="MOD_VIPAMAZONASSOCIATES_LINK_COLOR_DESC" />
+				<field name="amazon_align" type="list" default="center" label="MOD_VIPAMAZONASSOCIATES_ALIGN" description="MOD_VIPAMAZONASSOCIATES_ALIGN_DESC">
+                   <option value="left">MOD_VIPAMAZONASSOCIATES_LEFT</option>
+                   <option value="right">MOD_VIPAMAZONASSOCIATES_RIGHT</option>
+                   <option value="center">MOD_VIPAMAZONASSOCIATES_CENTER</option>
+                </field>
 			</fieldset>
 			
+			<fieldset name="additional_code" label="MOD_VIPAMAZONASSOCIATES_CUSTOM_CODE">
+                <field name="customcode" type="textarea" default="" label="MOD_VIPAMAZONASSOCIATES_CUSTOM_CODE" description="MOD_VIPAMAZONASSOCIATES_CUSTOM_CODE_DESC" cols="50" rows="20" filter="raw" />
+            </fieldset>
+            
 			<fieldset name="advanced">
 				<field
                     name="moduleclass_sfx"
@@ -139,6 +166,11 @@
                         value="static"></option>
                 </field>
 
+                <field name="amazon_bannercode" type="text" default="" size="80" label="MOD_VIPAMAZONASSOCIATES_BANNER_CODE" description="MOD_VIPAMAZONASSOCIATES_BANNER_CODE_DESC" />
+                <field name="load_css" type="radio" default="1" label="MOD_VIPAMAZONASSOCIATES_LOAD_CSS" description="MOD_VIPAMAZONASSOCIATES_LOAD_CSS_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
 				<field name="blocked_ips" type="textarea" default="" label="MOD_VIPAMAZONASSOCIATES_BLOCKED_IPS" description="MOD_VIPAMAZONASSOCIATES_BLOCKED_IPS_DESC" cols="50" rows="8" />
 				<field name="alt_message" type="textarea" default="" label="MOD_VIPAMAZONASSOCIATES_BLOCKED_IPS_MSG" description="MOD_VIPAMAZONASSOCIATES_BLOCKED_IPS_MSG_DESC" cols="50" rows="8" />
 				
