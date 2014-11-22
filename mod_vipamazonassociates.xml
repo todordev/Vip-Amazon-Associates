@@ -1,20 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<extension type="module" version="2.5" client="site" method="upgrade">
+<extension type="module" version="3.3" client="site" method="upgrade">
     <name>MOD_VIPAMAZONASSOCIATES</name>
 	<author>Todor Iliev</author>
-	<copyright>Copyright (C) 2010 Todor Iliev ( ITPrism.com )</copyright>
+	<copyright>Copyright (C) 2014 Todor Iliev ( ITPrism.com )</copyright>
 	<license>http://www.gnu.org/copyleft/gpl.html</license>
 	<authorEmail>todor@itprism.com</authorEmail>
 	<authorUrl>http://itprism.com</authorUrl>
-	<version>1.6</version>
-	<creationDate>23 October, 2012</creationDate>
-	<description>MOD_VIPAMAZONASSOCIATES_DESC</description>
+	<version>1.7</version>
+	<creationDate>22 November, 2014</creationDate>
+	<description><![CDATA[
+    <p><a href="http://itprism.com/free-joomla-extensions/ecommerce-gamification/amazon-associate-affiliate" target="_blank">Vip Amazon Associates</a> is a simple solution that implements Amazon Associates Widget as Joomla! module.</p>
+    <p><a href='http://itprism.com/help/85-amazon-association-documentation-faq' target='_blank'>Read documentation</a> that will help you to setup the extension.</p>
+    <p>Invest in the extension improvement and <a href="http://itprism.com/sponsorship" title="Sponsoring" target="_blank">sponsor</a> it via SMS, PayPal or Bitcoin.</p>
+    <p><a href="http://itprism.com/" target="_blank">Subscribe for the newsletter</a> to receive <strong>gifts</strong>, <strong>discount codes</strong>, information about <strong>updates</strong> and information about <strong>new ITPrism extensions</strong>.</p>
+    <p>Please, vote for the module on <a href="http://extensions.joomla.org/extensions/ads-a-affiliates/amazon/8450" target="_blank">Joomla! Extensions Directory</a>.</p>
+	]]></description>
 	
-	<languages folder="language">
-        <language tag="en-GB">en-GB/en-GB.mod_vipamazonassociates.ini</language>
-        <language tag="en-GB">en-GB/en-GB.mod_vipamazonassociates.sys.ini</language>
-    </languages> 
-    
     <help url="MOD_VIPAMAZONASSOCIATES_HELP_URL"/>
     
 	<files>
@@ -23,13 +24,15 @@
         <filename>helper.php</filename>
         <filename>style.css</filename>
         <filename>README.md</filename>
+
+        <folder>language</folder>
         <folder>tmpl</folder>
 	</files>
 	
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
-			    <field name="display_banner" type="radio" default="1" label="MOD_VIPAMAZONASSOCIATES_DISPLAY_BANNER" description="MOD_VIPAMAZONASSOCIATES_DISPLAY_BANNER_DESC" >
+			    <field name="display_banner" type="radio" default="1" label="MOD_VIPAMAZONASSOCIATES_DISPLAY_BANNER" description="MOD_VIPAMAZONASSOCIATES_DISPLAY_BANNER_DESC" class="btn-group">
                    <option value="0">JNO</option>
                    <option value="1">JYES</option>
                 </field>
@@ -37,11 +40,8 @@
 				<field name="amazon_domain" type="list" default="us" label="MOD_VIPAMAZONASSOCIATES_DOMAIN" description="MOD_VIPAMAZONASSOCIATES_DOMAIN_DESC">
 					<option value="us">MOD_VIPAMAZONASSOCIATES_DOMAIN_COM</option>
 					<option value="uk">MOD_VIPAMAZONASSOCIATES_DOMAIN_CO_UK</option>
-					<option value="de">MOD_VIPAMAZONASSOCIATES_DOMAIN_DE</option>
 					<option value="fr">MOD_VIPAMAZONASSOCIATES_DOMAIN_FR</option>
-					<option value="jp">MOD_VIPAMAZONASSOCIATES_DOMAIN_JP</option>
 					<option value="ca">MOD_VIPAMAZONASSOCIATES_DOMAIN_CA</option>
-					<option value="it">MOD_VIPAMAZONASSOCIATES_DOMAIN_IT</option>
 				</field>
 				<field name="amazon_size" type="list" default="14" label="MOD_VIPAMAZONASSOCIATES_SIZE" description="MOD_VIPAMAZONASSOCIATES_SIZE_DESC">
 					<option value="6">120 x 150</option>
@@ -139,7 +139,7 @@
 			</fieldset>
 			
 			<fieldset name="additional_code" label="MOD_VIPAMAZONASSOCIATES_CUSTOM_CODE">
-                <field name="customcode" type="textarea" default="" label="MOD_VIPAMAZONASSOCIATES_CUSTOM_CODE" description="MOD_VIPAMAZONASSOCIATES_CUSTOM_CODE_DESC" cols="50" rows="20" filter="raw" />
+                <field name="customcode" type="textarea" default="" label="MOD_VIPAMAZONASSOCIATES_CUSTOM_CODE" description="MOD_VIPAMAZONASSOCIATES_CUSTOM_CODE_DESC" rows="20" filter="raw" class="input-xxlarge" />
             </fieldset>
             
 			<fieldset name="advanced">
@@ -174,12 +174,12 @@
                 </field>
 
                 <field name="amazon_bannercode" type="text" default="" size="80" label="MOD_VIPAMAZONASSOCIATES_BANNER_CODE" description="MOD_VIPAMAZONASSOCIATES_BANNER_CODE_DESC" />
-                <field name="load_css" type="radio" default="1" label="MOD_VIPAMAZONASSOCIATES_LOAD_CSS" description="MOD_VIPAMAZONASSOCIATES_LOAD_CSS_DESC">
+                <field name="load_css" type="radio" default="1" label="MOD_VIPAMAZONASSOCIATES_LOAD_CSS" description="MOD_VIPAMAZONASSOCIATES_LOAD_CSS_DESC" class="btn-group">
                     <option value="0">JNO</option>
                     <option value="1">JYES</option>
                 </field>
-				<field name="blocked_ips" type="textarea" default="" label="MOD_VIPAMAZONASSOCIATES_BLOCKED_IPS" description="MOD_VIPAMAZONASSOCIATES_BLOCKED_IPS_DESC" cols="50" rows="8" />
-				<field name="alt_message" type="textarea" default="" label="MOD_VIPAMAZONASSOCIATES_BLOCKED_IPS_MSG" description="MOD_VIPAMAZONASSOCIATES_BLOCKED_IPS_MSG_DESC" cols="50" rows="8" />
+				<field name="blocked_ips" type="textarea" default="" label="MOD_VIPAMAZONASSOCIATES_BLOCKED_IPS" description="MOD_VIPAMAZONASSOCIATES_BLOCKED_IPS_DESC" rows="8" class="input-xxlarge" />
+				<field name="alt_message" type="textarea" default="" label="MOD_VIPAMAZONASSOCIATES_BLOCKED_IPS_MSG" description="MOD_VIPAMAZONASSOCIATES_BLOCKED_IPS_MSG_DESC" rows="8" class="input-xxlarge" />
 				
 			</fieldset>
 		</fields>
